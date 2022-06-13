@@ -65,41 +65,41 @@ return (
         <li id={idx}>{`${person.name} ${person.lastName}`}</li>
       ))}
     </ul>
+    <h1>Calculator</h1>
     <label for="primerNum">Ingresar primer dígito:
       </label>
       <input
         type="number"
         name="primerNum"
+        class="form-control"
         onChange={(event) => {
           setprimerNum(event.target.value);
         }}
       />
       <br/>
-      <br/>
-      <label for="primerNum">Ingresar Segundo dígito:
+      <label for="primerNum">Ingresar segundo dígito:
       </label>
       <input
         type="number"
         name="segundoNum"
+        class="form-control"
         onChange={(event) => {
           setsegundoNum(event.target.value);
         }}
       />
-      <br/>
-      <br/>
+         <br/>
       <div class="buttons">
         <button className="btn" type="button" class="btn btn-primary" onClick={sumar}>Sumar</button>
-        <button className="btn" type="button" class="btn btn-warning" onClick={restar}>Restar</button>
-        <button className="btn" type="button" class="btn btn-primary" onClick={dividir}>Dividir</button>
-        <button className="btn" type="button" class="btn btn-primary" onClick={multiplicar}>Multiplicar</button>
+        <button className="btn" type="button" class="btn btn-success" onClick={restar}>Restar</button>
+        <button className="btn" type="button" class="btn btn-danger" onClick={dividir}>Dividir</button>
+        <button className="btn" type="button" class="btn btn-warning" onClick={multiplicar}>Multiplicar</button>
       </div>
-      <br/>
-      <br/>
-      <label for="primerNum">Resultado:
+      <label for="primerNum">Resultado de la operacion:
       </label>
       <input
         type="text"
         name="results"
+        class="form-control"
         value={resultado}
         disabled
       />
